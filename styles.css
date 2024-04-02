@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 75vh;
+    width: 75vh;
+    outline: 1px solid green;
+}

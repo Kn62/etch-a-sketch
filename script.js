@@ -33,6 +33,4 @@ const resetGame = function(){
 };
 
 buttonStart.addEventListener("click", startGame);
-buttonReset.addEventListener("click", resetGame)
-
-console.log(gridContainer.childElementCount)
+buttonReset.addEventListener("click", resetGame);

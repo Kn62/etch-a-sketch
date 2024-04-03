@@ -1,8 +1,12 @@
 const gridContainer = document.querySelector(".grid-container");
-const buttonStart = document.querySelector(".start")
+const buttonStart = document.querySelector(".start");
+const buttonReset = document.querySelector(".reset");
 
 
 const startGame = function(){
+
+    buttonStart.style.display = 'none';
+    buttonReset.style.display = 'initial';
 
     let gridSize = parseInt(prompt("Choose Square Size"));
     let squareHeight = 100/gridSize;
@@ -10,6 +14,7 @@ const startGame = function(){
     
     for (let i = 0; i < gridSize * gridSize; i++){
         const square = document.createElement("div");
+        square.classList.add("square")
         square.style.height = `${squareHeight}%`; 
         square.style.width = `${squareWidth}%`;
         square.addEventListener('mouseover', () => {
@@ -20,7 +25,14 @@ const startGame = function(){
         })
         gridContainer.appendChild(square);
 
-    }
-}
+    };
+};
 
-buttonStart.addEventListener("click", startGame)
+const resetGame = function(){
+    window.location.reload();
+};
+
+buttonStart.addEventListener("click", startGame);
+buttonReset.addEventListener("click", resetGame)
+
+console.log(gridContainer.childElementCount)
